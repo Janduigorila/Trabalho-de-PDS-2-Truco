@@ -19,6 +19,44 @@ enum class Tipos_Cartas {
 struct Carta {
     Naipes naipes;
     Tipos_Cartas tipos_cartas;
+
+    std::string toString() {
+        std::string tipoDaCarta = "";
+
+        if(naipes == Naipes::DIAMANTE) {
+            tipoDaCarta = "Diamante - ";
+        } else if(naipes == Naipes::OURO) {
+            tipoDaCarta = "Ouro - ";
+        } else if (naipes == Naipes::ESPADA) {
+            tipoDaCarta = "Espada - ";
+        } else if(naipes == Naipes::FOLHAS){
+            tipoDaCarta = "Folhas - ";
+        }
+
+        if(tipos_cartas == Tipos_Cartas::AS) {
+            tipoDaCarta += "AS";
+        } else if(tipos_cartas == Tipos_Cartas::DOIS) {
+            tipoDaCarta += "DOIS";
+        } else if(tipos_cartas == Tipos_Cartas::TRES) {
+            tipoDaCarta += "TRES";
+        } else if(tipos_cartas == Tipos_Cartas::QUATRO) {
+            tipoDaCarta += "QUATRO";
+        } else if(tipos_cartas == Tipos_Cartas::CINCO) {
+            tipoDaCarta += "CINCO";
+        } else if(tipos_cartas == Tipos_Cartas::SEIS) {
+            tipoDaCarta += "SEIS";
+        } else if(tipos_cartas == Tipos_Cartas::SETE) {
+            tipoDaCarta += "SETE";
+        } else if(tipos_cartas == Tipos_Cartas::REI) {
+            tipoDaCarta += "REI";
+        } else if(tipos_cartas == Tipos_Cartas::RAINHA) {
+            tipoDaCarta += "RAINHA";
+        } else if(tipos_cartas == Tipos_Cartas::VALETE) {
+            tipoDaCarta += "VALETE";
+        }
+
+        return tipoDaCarta;
+    }
 };
 
 struct Baralho {
